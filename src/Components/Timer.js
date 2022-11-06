@@ -1,14 +1,11 @@
 import React from "react";
-// import StartButton from './Components/StartButton';
-// import PauseButton from './Components/PauseButton';
-// import SettingsButton from './Components/Settings';
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./Timer.css";
 import "react-circular-progressbar/dist/styles.css";
 
 const Timer = (props) => {
-  const value = 0.66;
+  const value = 0.22;
   return (
     <main>
       <CircularProgressbar
@@ -17,6 +14,7 @@ const Timer = (props) => {
         text={`${value * 100} : ${value * 100}`}
       />
       <div>
+        {/* Play button */}
         <button {...props}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,6 +36,7 @@ const Timer = (props) => {
             />
           </svg>
         </button>
+        {/* Pause button */}
         <button {...props}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,6 +55,7 @@ const Timer = (props) => {
         </button>
       </div>
       <div>
+        {/* Settings button */}
         <button {...props} className="with-text">
           <svg
             xmlns="http://www.w3.org/2000/svg"
