@@ -1,7 +1,10 @@
 import React, {useState} from "react";
 import "./App.css";
+import "./Settings.css";
+
 import NavigationBar from "./Components/Nav";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Timer from "./Components/Timer";
 
 function App() {
 
@@ -20,11 +23,14 @@ function App() {
   // const Logout = () => {
   //   console.log("Logout")
   // }
+
+
   return (
-    
-       <div className="App">
+
+    <div className="App">
+      
       <NavigationBar />
-     
+      
       </div>
    
   );

@@ -1,11 +1,31 @@
 import React from "react";
+import { useState } from "react";
+import { connect } from "react-redux";
+import {
+  switchBreak,
+  switchSession,
+  decrSeconds,
+} from "../actions/TimerActions";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./Timer.css";
 import "react-circular-progressbar/dist/styles.css";
+import SettingsModal from "./Settings";
 
-const Timer = (props) => {
+const Timer = ({
+  secondsRemain,
+  countdown,
+  interval,
+  switchBreak,
+  switchSession,
+  startTimer,
+  pauseTimer,
+  settings,
+}) => {
   const value = 0.22;
+
+  const [openModal, setOpenModal] = useState(false);
+ 
   return (
     <main>
       <CircularProgressbar
@@ -15,7 +35,7 @@ const Timer = (props) => {
       />
       <div>
         {/* Play button */}
-        <button {...props}>
+        <button {...startTimer}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -37,7 +57,7 @@ const Timer = (props) => {
           </svg>
         </button>
         {/* Pause button */}
-        <button {...props}>
+        <button {...pauseTimer}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -56,7 +76,13 @@ const Timer = (props) => {
       </div>
       <div>
         {/* Settings button */}
-        <button {...props} className="with-text">
+        <button
+          {...settings}
+          className="with-text openModalBtn"
+          onClick={() => {
+            setOpenModal(true);
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -73,9 +99,22 @@ const Timer = (props) => {
           </svg>
           Settings
         </button>
+        {openModal && <SettingsModal closeModal={ setOpenModal} />}
       </div>
     </main>
   );
 };
 
-export default Timer;
+const mapStateToProps = ({ secondsRemain, countdown, interval }) => ({
+  secondsRemain,
+  countdown,
+  interval,
+});
+
+const mapDispatchToProps = {
+  switchSession,
+  switchBreak,
+  decrSeconds,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Timer);

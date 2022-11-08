@@ -7,6 +7,7 @@ import LogInPage from "./LogIn";
 import CreateAccount from "./CreateAccount";
 import Timer from "./Timer";
 import Faq from "./Faq";
+import Dashboard from "./Dashboard"
 import {
   BrowserRouter as Router,
   Routes,
@@ -46,6 +47,9 @@ function NavigationBar() {
                     <Nav.Link as={Link} to="/Login">
                       Log In
                     </Nav.Link>
+                    <Nav.Link as={Link} to="/Dashboard">
+                      Dashboard
+                    </Nav.Link>
                     <NavDropdown
                       title="Dropdown"
                       id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -58,7 +62,7 @@ function NavigationBar() {
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="#action5">
-                        Something else here
+                        Logout
                       </NavDropdown.Item>
                     </NavDropdown>
                   </Nav>
@@ -71,7 +75,8 @@ function NavigationBar() {
           <Route path="/" element={<Timer />} />
           <Route path="/Login/*" element={<LogInPage />} />
           <Route path="/CreateAccount" element={<CreateAccount />} />
-          <Route path="/FAQ" element={<Faq/>} />
+          <Route path="/FAQ" element={<Faq />} />
+          <Route path="/Dashboard" element={<Dashboard/>}/>
         </Routes>
       </>
     </BrowserRouter>
