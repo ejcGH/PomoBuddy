@@ -1,21 +1,19 @@
-import React, {useState} from "react";
+import React from "react";
 import "./App.css";
 import "./Settings.css";
 
 import NavigationBar from "./Components/Nav";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Timer from "./Components/Timer";
 
 function App() {
-
   // const adminUser = {
   //   email: "admin@admin.com",
   //   password: "admin123"
   // }
- 
+
   // const [user, setUser] = useState({ name: "", email: "" })
   // const [error, setError] = useState("")
-  
+
   // const Login = details => {
   //   console.log(details)
   // }
@@ -24,15 +22,13 @@ function App() {
   //   console.log("Logout")
   // }
 
-
   return (
 
-    <div className="App">
-      
-      <NavigationBar />
-      
+      <div className="App">
+        <NavigationBar />
+ 
       </div>
-   
+
   );
 }
 

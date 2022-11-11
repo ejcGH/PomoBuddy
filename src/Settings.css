@@ -6,3 +6,32 @@
     padding-bottom: 20px;
 }
 
+.slider {
+    height: 40px;
+    border: 2px solid rgb(200, 69, 69);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.thumb {
+    background-color: rgb(200, 69, 69);
+    cursor: pointer;
+    width: 35px;
+    height: 37px;
+    border-radius: 30px;
+}
+
+.slider2 {
+    height: 40px;
+    border: 2px solid rgb(96, 148, 79);
+    border-radius: 15px;
+
+}
+
+.thumb2 {
+    background-color: rgb(96, 148, 79);
+    cursor: pointer;
+    width: 35px;
+    height: 37px;
+    border-radius: 30px;
+}

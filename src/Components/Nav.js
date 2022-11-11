@@ -5,7 +5,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import LogInPage from "./LogIn";
 import CreateAccount from "./CreateAccount";
-import Timer from "./Timer";
 import Faq from "./Faq";
 import Dashboard from "./Dashboard"
 import {
@@ -15,6 +14,8 @@ import {
   Link,
   BrowserRouter,
 } from "react-router-dom";
+import Timer from "./Timer";
+
 
 function NavigationBar() {
   return (
@@ -72,7 +73,7 @@ function NavigationBar() {
           </Navbar>
         ))}
         <Routes>
-          <Route path="/" element={<Timer />} />
+          <Route path="/" element={<Timer/>} />
           <Route path="/Login/*" element={<LogInPage />} />
           <Route path="/CreateAccount" element={<CreateAccount />} />
           <Route path="/FAQ" element={<Faq />} />
