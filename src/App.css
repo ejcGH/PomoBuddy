@@ -8,7 +8,7 @@ main {
   max-width: 350px;
 }
 
-button {
+.TimerBtn {
   background-color: transparent;
   color: rgba(215, 210, 210, 0.8);
   border: 0;
@@ -43,6 +43,92 @@ button.with-text svg{
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.TodoForm {
+  width: 100%;
+  height: 30px;
+  margin: 20px 0;
+  display: flex;
+}
+
+ form .TodoInput,
+form .TodoBtn {
+  flex: 3;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #1e2534;
+}
+
+form .TodoBtn {
+  flex: 1;
+  color: rgb(131, 128, 128);
+  margin: 0 10px;
+  letter-spacing:  1.5px;
+}
+
+.TodoDel {
+  border: none;
+  background-color:rgb(208, 106, 106);
+  color:white;
+  /* color: rgb(131, 128, 128); */
+  margin: 0 10px;
+  letter-spacing:  1.5px;
+
+}
+
+.TodoEdit {
+border: none;
+  color: rgb(131, 128, 128);
+  margin: 0 10px;
+  letter-spacing:  1.5px;
+}
+
+ul li .TodoInput {
+  margin-right: 10px;
+}
+ul li .TodoEdit:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+.todobox {
+  max-width: 500px;
+  width: 100%;
+  min-height: 400px;
+  box-sizing: 0 2px 6px #555;
+  margin: 50px auto;
+  padding: 50px
+}
+
+ul li {
+  display: flex;
+  list-style: none;
+  border: .5px solid #555;
+  margin: 10px 0;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+ul li .active {
+  text-decoration: line-through;
+  opacity: 1;
+
+}
+
+label {
+  cursor: pointer;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 400px) {
+  .todobox {
+    padding:10px
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

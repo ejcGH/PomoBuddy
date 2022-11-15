@@ -3,7 +3,7 @@ import React from "react";
 const PauseButton = (props) => {
 
     return (
-        <button {...props}>
+        <button {...props} className="TimerBtn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

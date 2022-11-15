@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect, useContext, useRef } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import "./Timer.css";
+
 import "react-circular-progressbar/dist/styles.css";
 import SettingsModal from "./Settings";
 import SettingsContext from "./SettingsContext";
@@ -12,7 +12,7 @@ import PauseButton from "./PauseButton";
 const Timer = () => {
   const settings = useContext(SettingsContext);
   const [openModal, setOpenModal] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
 
   const [studyMinutes, setStudyMinutes] = useState(20);
   const [breakMinutes, setBreakMinutes] = useState(10);

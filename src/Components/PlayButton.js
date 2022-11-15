@@ -2,7 +2,7 @@ import React from "react";
 
 const PlayButton = (props) => {
     return (
-        <button {...props}>
+        <button {...props} className="TimerBtn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
