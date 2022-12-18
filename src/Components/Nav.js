@@ -1,12 +1,9 @@
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import LogInPage from "./LogIn";
-import CreateAccount from "./CreateAccount";
-import Faq from "./Faq";
-import Dashboard from "./Dashboard"
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,12 +11,18 @@ import {
   Link,
   BrowserRouter,
 } from "react-router-dom";
-import Timer from "./Timer";
 
 
 function NavigationBar() {
+  // const [token, setToken] = useState()
+
+  // if (!token) {
+  //   return <LogInPage setToken={ setToken}/>
+  //   }
+  // const auth = useLoginAuth()
   return (
-    <BrowserRouter>
+    // <LoginAuthProvider>
+
       <>
         {["sm"].map((expand) => (
           <Navbar key={expand} bg="light" expand={expand} className="mb-3 py-3">
@@ -45,22 +48,24 @@ function NavigationBar() {
                     <Nav.Link as={Link} to="/">
                       Home
                     </Nav.Link>
+
                     <Nav.Link as={Link} to="/Login">
                       Log In
                     </Nav.Link>
+
                     <Nav.Link as={Link} to="/Dashboard">
                       Dashboard
                     </Nav.Link>
                     <NavDropdown
-                      title="Dropdown"
+                      title="More"
                       id={`offcanvasNavbarDropdown-expand-${expand}`}
                     >
                       <NavDropdown.Item as={Link} to="/FAQ">
                         FAQ
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="#action4">
+                      {/* <NavDropdown.Item href="#action4">
                         Another action
-                      </NavDropdown.Item>
+                      </NavDropdown.Item> */}
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="#action5">
                         Logout
@@ -72,15 +77,10 @@ function NavigationBar() {
             </Container>
           </Navbar>
         ))}
-        <Routes>
-          <Route path="/" element={<Timer/>} />
-          <Route path="/Login/*" element={<LogInPage />} />
-          <Route path="/CreateAccount" element={<CreateAccount />} />
-          <Route path="/FAQ" element={<Faq />} />
-          <Route path="/Dashboard" element={<Dashboard/>}/>
-        </Routes>
+        
       </>
-    </BrowserRouter>
+
+    // </LoginAuthProvider>
   );
 }
 

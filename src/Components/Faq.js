@@ -6,6 +6,7 @@ import {
   MDBListGroupItem,
   MDBTypography,
 } from "mdb-react-ui-kit";
+import NavigationBar from "./Nav";
 
 const Faq = () => {
   const [collapse1, setCollapse1] = useState(false);
@@ -18,12 +19,16 @@ const Faq = () => {
 
   return (
     <>
+      <NavigationBar />
       <h1>The Pomodoro Timer</h1>
       <MDBContainer className="mt-5" style={{ maxWidth: "1000px" }}>
         <MDBListGroup>
           <MDBListGroupItem tag="a" href="#" onClick={toggleCollapse1} action>
             <MDBTypography tag="h5">How To Use Pomodoro Buddy</MDBTypography>
-            <p className="mb-1">Press play to start Timer, Pause to Pause, Settings to change Time.</p>
+            <p className="mb-1">
+              Press play to start Timer, Pause to Pause, Settings to change
+              Time.
+            </p>
             <small>
               <u>Learn more</u>
             </small>
@@ -40,7 +45,9 @@ const Faq = () => {
             <MDBTypography tag="h5">
               How The Pomodoro Technique Works
             </MDBTypography>
-            <p className="mb-1">Set your timer, work on task until time ends, take a break!</p>
+            <p className="mb-1">
+              Set your timer, work on task until time ends, take a break!
+            </p>
             <small>
               <u>Learn more</u>
             </small>
@@ -63,15 +70,14 @@ const Faq = () => {
             <MDBTypography tag="h5">
               Why Do I Need To Make An Account?
             </MDBTypography>
-            <p className="mb-1">Short & concise version of the answer.</p>
+            <p className="mb-1">To unlock the todo list feature!</p>
             <small>
               <u>Learn more</u>
             </small>
             <MDBCollapse show={collapse3}>
-              Detailed and comprehensive answer goes here. pariatur cliche
-              reprehenderit, enim eiusmod high life accusamus terry richardson
-              ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
-              anderson cred nesciunt sapiente ea proident.
+              Creating an account is not necessary. BUt if you'd like to get
+              access to our app's todo list, you can register for an account and
+              your todo list and timer will be all in one place.
             </MDBCollapse>
           </MDBListGroupItem>
         </MDBListGroup>

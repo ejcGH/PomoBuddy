@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect, useContext, useRef } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-
+import NavigationBar from "./Nav";
 import "react-circular-progressbar/dist/styles.css";
 import SettingsModal from "./Settings";
 import SettingsContext from "./SettingsContext";
@@ -81,6 +81,8 @@ const Timer = () => {
   if (seconds < 10) seconds = "0" + seconds;
 
   return (
+    <>
+    <NavigationBar/>
     <main>
       <SettingsContext.Provider
         value={{
@@ -142,7 +144,8 @@ const Timer = () => {
           {openModal && <SettingsModal closeModal={setOpenModal} />}
         </div>
       </SettingsContext.Provider>
-    </main>
+      </main>
+      </>
   );
 };
 

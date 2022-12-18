@@ -18,10 +18,21 @@ main {
   cursor: pointer;
   
 }
+.modalCloseX, .modalContinue {
+  background-color: transparent;
+  color: rgba(26, 13, 13, 0.8);
+  border: 0;
+  display: inline-block;
+  width: 90px;
+  padding-top: 30px;
+  cursor: pointer;
+}
 
 button.with-text{
   font-size: 1.3rem;
-  background-color: #515c70;
+  background-color: #9ca6b8;
+ 
+  color:aliceblue;
   width: auto;
   border-radius: 15px;
   padding: 7px 15px;
@@ -77,12 +88,20 @@ form .TodoBtn {
 
 }
 
-.TodoEdit {
+.TodoEdit{
 border: none;
   color: rgb(131, 128, 128);
   margin: 0 10px;
   letter-spacing:  1.5px;
 }
+
+.TodoSave {
+  border: none;
+    background-color: rgb(253, 213, 162);
+    color: rgb(131, 128, 128);
+    margin: 0 10px;
+    letter-spacing:  1.5px;
+  }
 
 ul li .TodoInput {
   margin-right: 10px;

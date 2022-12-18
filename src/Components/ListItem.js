@@ -30,7 +30,7 @@ const ListItem = ({ todo, id, checkComplete,handleEditTodos }) => {
           onChange={(e) => setEditValue(e.target.value)}
         />
 
-        <button onClick={() => handleSave(id)}>Save</button>
+        <button className="TodoSave" onClick={() => handleSave(id)}>Save</button>
       </li>
     );
   } else {

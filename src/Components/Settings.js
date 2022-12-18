@@ -37,7 +37,7 @@ const SettingsModal = ({ closeModal }) => {
           />
         </div>
         <div className="footer">
-          <button onClick={() => closeModal(false)}>Continue</button>
+          <button className="modalContinue" onClick={() => closeModal(false)}>Continue</button>
         </div>
       </div>
     </div>
